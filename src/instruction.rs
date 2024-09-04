@@ -1,5 +1,8 @@
+use strum::EnumIter;
+
 #[allow(clippy::upper_case_acronyms, non_camel_case_types)]
-enum GBInstruction {
+#[derive(Debug, EnumIter)]
+pub enum GBInstruction {
     NOP = 0x00,
     LD_BC_D16 = 0x01,
     LD_BCP_A = 0x02,
@@ -248,7 +251,8 @@ enum GBInstruction {
 }
 
 #[allow(clippy::upper_case_acronyms, non_camel_case_types)]
-enum GBInstructions {
+#[derive(Debug, EnumIter)]
+pub enum GBInstructions {
     // NOP
     NOP = 0x00,
 
